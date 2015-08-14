@@ -3,6 +3,7 @@ I am a full-stack Web designer and developer with almost 7-8 years of experience
 
 
 ## Resume 履歷  
+ - [Github.io] (http://yanlonglai.github.io/www/)
  - [Online Resume] (http://www.doyoubuzz.com/yanlong-lai)
  - [LinkedIn] (https://tw.linkedin.com/pub/yan-long-lai/73/ba3/116)
 
