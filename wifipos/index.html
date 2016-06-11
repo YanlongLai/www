@@ -250,7 +250,7 @@
         /*margin: 4px;*/
         /*padding: 4em 0;*/
         text-align: center;
-        display: inherit;
+        /*display: inherit;*/
         /*border: 1px solid #eebb55;*/
         /*border-radius: 7pt;*/
         /*background: #ffeebb;*/
@@ -307,25 +307,7 @@
         background: #FFF;
         font-weight: 500;
     }
-    .carousel-inner .item {
-        position: relative;
-    }
-    .carousel-inner .item div{
-        position: absolute;
-        text-align: center;
-        padding: 1em;
-        /*padding-top: 18em;*/
-        bottom: 15%;
-        font-weight: 500;
-        text-shadow: 0 2px 3px rgba(0,0,0,0.9);
-        color: #FFF;
-        background: #000;
-        opacity: 0.7;
-        width: 100%;
-    }
-    .CarouselImg img {
-        width: 100%;
-    }
+
     /* Too narrow to support three columns */
     @media all and (max-width: 640px) {
         #main, #page, #middle, .bottom {
@@ -367,25 +349,25 @@
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
               <div class="item CarouselImg active">
-                  <div>
+                  <img src="images/c1.jpg" alt="First Slide">
+                  <div class="carousel-caption">
                     <h1>Increase working efficiency and shorten ordering process</h1>
                     Traditionally waiters/waitresses have to use paper to write it down what guests ordering which takes some time if it’s a long food name (based on different language characters). WifiPos only acquires a tabslet which can be efficiently connected between front and back of house management. One-tap on the “E-table”at the front house, the back house would get an immediate response and be ready to serve on time.
                   </div>
-                  <img src="images/c1.jpg" alt="First Slide">
               </div>
               <div class="item CarouselImg">
-                  <div>
+                  <img src="images/c2_f.png" alt="Second Slide">
+                  <div class="carousel-caption">
                   <h1>Being eco-friendly with less paper consumption</h1>
                   It would be a tremendous expense for the paper consumption along with the growing business. By saving our living environment as well as daily expense, reduction of paper is necessary for business purpose.
                   </div>
-                  <img src="images/c2_f.png" alt="Second Slide">
               </div>
               <div class="item CarouselImg">
-                  <div>
+                  <img src="images/c3.jpg" alt="Third Slide">
+                  <div class="carousel-caption">
                   <h1>Easier maintenance and Scalable extension</h1>
                   Wifi-POS uses wifi and is easier to maintain ordering system on daily basis than App which takes higher expenses and more time to be developed and updated across different platforms. Besides, it can be extended to be applied for the future development such as self-order system, remote-order system, etc.
                   </div>
-                  <img src="images/c3.jpg" alt="Third Slide">
               </div>
           </div>
           <!-- Carousel controls -->
