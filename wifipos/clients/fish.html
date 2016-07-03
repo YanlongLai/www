@@ -29,7 +29,7 @@
       font-weight: 100;
       font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #727272;
-      background: #212121;
+      background: #FFF;
     }
     a {
       color: #FFF;
@@ -163,7 +163,10 @@
         text-align: center;
         color: #999;
         padding: 16em 1em 0;
-        background: #FFF;
+        /*background: #FFF;*/
+        background: #517fa4; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #517fa4 , #243949); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #517fa4 , #243949); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
     .bottom > .content h1{
@@ -199,57 +202,6 @@
         flex: 1 6 33%;
         order: 1;
         position: relative;
-    }
-
-    .bottom > article {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > article a {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > article:hover {
-      color: rgba(255, 255, 255, 1);
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .bottom > article:hover a{
-      color: rgba(255, 255, 255, 1);
-    }
-
-    .bottom > nav {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > nav a {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > nav:hover {
-      color: rgba(255, 255, 255, 1);
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .bottom > nav:hover a{
-      color: rgba(255, 255, 255, 1);
-    }
-
-    .bottom > aside {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > aside a {
-      color: rgba(0, 0, 0, 0);
-    }
-
-    .bottom > aside:hover {
-      color: rgba(255, 255, 255, 1);
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .bottom > aside:hover a{
-      color: rgba(255, 255, 255, 1);
     }
 
     .bottom > nav::after {
@@ -319,7 +271,7 @@
       /*opacity: 0.7;*/
       left: 10%;
       right: 10%;
-      bottom: 33%;
+      bottom: 38%;
       padding: 2em 1em;
       /*font-size: 4em;*/
     }
@@ -374,7 +326,7 @@
         min-height: 300px;
         /*border: 1px solid #eebb55;*/
         /*border-radius: 7pt;*/
-        background: #FFF;
+        /*background: rgba(0,0,0,0.05);*/
         font-weight: 500;
     }
     footer .glyphicon.block {
@@ -434,8 +386,49 @@
     }
     .CarouselImg img {
       opacity: 0.3;
-      /*height: 560px!important;*/
-      width: 100%;
+    }
+
+    .my-container {
+        position: relative;
+        background: #000;
+        overflow: hidden;
+        height: 560px;
+        margin-bottom: 60px;
+    }
+    .my-container h1 {
+        /*padding: 50px;*/
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        color: #fff;
+        font-size: 3.375em;
+        line-height: 1.15;
+        margin-bottom: 0;
+        font-weight: 400;
+        letter-spacing: -1px;
+        top: 320px;
+    }
+    .my-container img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*height: auto;*/
+        z-index: 1;
+        opacity: 0.5;
+        width: 100%;
+        /*height: 560px;*/
+    }
+    article {
+      background: #fff;
+      padding: 15px;
+    }
+    .container .row p {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: #424242;
+      margin-bottom: 35px;
     }
     </style>
   </head>
@@ -444,139 +437,14 @@
     <header>
         <a href="./"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPos</h1></a>
     </header>
-    <div class="carousel_section">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Carousel indicators -->
-          <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <!-- Wrapper for carousel items -->
-          <div class="carousel-inner">
-              <div class="item CarouselImg active">
-                  <img src="images/c1_f.png" alt="First Slide">
-                  <div class="carousel-caption carousel_style">
-                    <a href="c1.html"><h1>Increase working efficiency and <br>shorten ordering process</h1></a>
-                    <!-- Traditionally waiters/waitresses have to use paper to write it down what guests ordering which takes some time if it’s a long food name (based on different language characters). WifiPos only acquires a tabslet which can be efficiently connected between front and back of house management. One-tap on the “E-table”at the front house, the back house would get an immediate response and be ready to serve on time. -->
-                  </div>
-              </div>
-              <div class="item CarouselImg">
-                  <img src="images/c2_f.png" alt="Second Slide">
-                  <div class="carousel-caption carousel_style">
-                  <a href="c2.html"><h1>Being eco-friendly with <br>less paper consumption</h1></a>
-                  <!-- It would be a tremendous expense for the paper consumption along with the growing business. By saving our living environment as well as daily expense, reduction of paper is necessary for business purpose. -->
-                  </div>
-              </div>
-              <div class="item CarouselImg">
-                  <img src="images/c3_f.png" alt="Third Slide">
-                  <div class="carousel-caption carousel_style">
-                  <a href="c3.html"><h1>Easier maintenance and <br>Scalable extension</h1></a>
-                  <!-- Wifi-POS uses wifi and is easier to maintain ordering system on daily basis than App which takes higher expenses and more time to be developed and updated across different platforms. Besides, it can be extended to be applied for the future development such as self-order system, remote-order system, etc. -->
-                  </div>
-              </div>
-          </div>
-          <!-- Carousel controls -->
-          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-      </div>
+    <div class="my-container">
+      <!-- <h1>Increase working efficiency and <br>shorten ordering process</h1> -->
+      <img src="../images/Fish_Village.jpg">
     </div>
-    <div class='bottom'>
-      <div class='content'>
-        <h1>Evolution of food order</h1>
-        <div>In 21st century, human’s life style and habit are changing and being evolved by technology development, therefore, utilising technology is essential to flourish business.</div>
+    <div class="container">
+      <div class="row">
+      <p>Welcome to YiPing Village where you can enjoy the most fresh seafood and most various and delicious meat sets and hot pots</p>
       </div>
-    </div>
-    <div id='middle'>
-      <article>
-        <div>Table management</div>
-      <a class="btn btn-info btn-lg" href="./functions/table.html">Readmore</a>
-      </article>
-      <!-- Modal -->
-      <div class="modal fade" id="tableModal" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Table management</h4>
-            </div>
-            <div class="modal-body">
-              <ol>
-                <li>Support multi-platforms (e.g. Android, iOS, Windows etc.)</li>
-                <li>Support multi-people using (e.g. 100 people ordering at the time)</li>
-                <li>Manually add/remove tables/seats</li>
-                <li>Different accounts enable different authorizations</li>
-                <li>Support different food ordering modes: Waiter mode/Guest mode/Kiosk/QR Code</li>
-                <li>Screen adjustable to fit different devices (phone, tablet, computer etc)</li>
-                <li>Kitchen side can see food orders via both paper or device screen</li>
-                <li>Sales (data) analytics</li>
-                <li>Data/file export/backup</li>
-                <li>Operational area can reach entire building or wifi-located area</li>
-              </ol>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <aside>
-        <div>Situational application</div>
-      <a class="btn btn-info btn-lg" href="./functions/application.html">Readmore</a>
-      </aside>
-      <!-- Modal -->
-      <div class="modal fade" id="applicationModal" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Situational application</h4>
-            </div>
-            <div class="modal-body">
-              <ol>
-                <li>Can support wireless-order in guest room</li>
-                <li>Simultaneous orderings by multi-waiters</li>
-                <li>Learning quickly and using intuitively</li>
-                <li>Using KIOSK system at front door</li>
-                <li>Have additional combination with coin machine</li>
-                <li>Self-ordering via scanning QR Code on guest table</li>
-                <li>After waiter opens table, guest can directly confirm and send out order</li>
-                <li>Each table has one tablet for ordering</li>
-                <li>Remote ordering available in wifi area</li>
-                <li>Support different languages in different sections</li>
-              </ol>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class='bottom'>
-      <div class='content'>
-        <h1>Our clients <span class="glyphicon glyphicon-user"></span></h1>
-      </div>
-    </div>
-    <div class='bottom'>
-      <article>
-      <a href="clients/fish.html"><h1>一品漁村 YiPing Fish Village</h1></a>
-      <!-- Welcome to YiPing Village where you can enjoy the most fresh seafood and most various and delicious meat sets and hot pots -->
-      </article>
-      <nav>
-      <a href="clients/natural.html"><h1>C.S.H. Natural 上山採覓</h1></a>
-      <!-- C.S.H Natural dedicates to provide a food journey where customers can enjoy natural, pure, tasty and healthy food without far driving to mountains -->
-      </nav>
-      <aside>
-      <a href="clients/chili.html"><h1>Red Chili  紅辣椒川菜館</h1></a>
-      <!-- A authentic sichuan food restaurant which delivers rich and various spicy food in a spacious place where you can fully enjoy drinking and chatting with friends. -->
-      </aside>
     </div>
     <footer>
       <h1>Contact Information</h1>
