@@ -109,7 +109,7 @@
         -webkit-background-size: cover;
         background-size: cover;
         background-attachment: scroll;
-        opacity: 0.7;
+        opacity: 0.3;
         top: 0;
         left: 0;
         bottom: 0;
@@ -134,7 +134,7 @@
         -webkit-background-size: cover;
         background-size: cover;
         background-attachment: scroll;
-        opacity: 0.7;
+        opacity: 0.3;
         top: 0;
         left: 0;
         bottom: 0;
@@ -164,6 +164,7 @@
         color: #999;
         padding: 16em 1em 0;
         background: #FFF;
+        max-width: 600px;
     }
 
     .bottom > .content h1{
@@ -295,12 +296,14 @@
       width: 100%;
     }
     .bottom .content div {
-      font-size: 1.5em;
-      font-weight: 500;
+ /*     font-size: 1.5em;
+      font-weight: 500;*/
     }
     .bottom .content h1 {
-      /*font-size: 4em;*/
-      font-weight: 700;
+      color: #222221;
+      font-weight: 300;
+      font-size: 30px;
+      margin: 0 0 30px;
     }
     .carousel-caption h1 {
       font-size: 3.375em;
@@ -311,17 +314,10 @@
         text-align: center;
     }
     .carousel_style {
-/*      background: #000;
-      opacity: 0.7;
-      left: 5%;
-      right: 5%;
-      padding: 2em 1em;*/
-      /*opacity: 0.7;*/
       left: 10%;
       right: 10%;
       bottom: 33%;
-      padding: 2em 1em;
-      /*font-size: 4em;*/
+      padding: 2% 1em;
     }
     .container-full {
       margin: 0 auto;
@@ -367,32 +363,66 @@
     }
     footer {
         display: block;
-        color: #999;
-        /*margin: 4px;*/
         padding: 4em 0;
         text-align: center;
         min-height: 300px;
-        /*border: 1px solid #eebb55;*/
-        /*border-radius: 7pt;*/
         background: #FFF;
         font-weight: 500;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: 300;
+        color: #424242;
+        margin: 0 0 10px;
     }
     footer .glyphicon.block {
         display: block;
         line-height: 2em;
     }
     footer a {
-      color: #727272;
+      color: #424242;
     }
+    footer a:hover {
+      color: #424242;
+    }
+
+    .glyphicon-envelope:before {
+      vertical-align: sub;
+    }
+
+    .glyphicon-earphone:before {
+      vertical-align: sub;
+    }
+
     .btn-info {
         margin-top: 1em;
-        background-image: linear-gradient(to bottom,#000 0,#000 50%);
+        /*background-image: linear-gradient(to bottom,#000 0,#000 50%);*/
         opacity: 0.7;
         border-color: #FFF;
+        border-radius: 30px;
+        background-color: #000!important;
+        background-image: none;
     }
 
     .btn-info:focus, .btn-info:hover {
-        background-color: #000;
+        background-color: #222!important;
+        border-color: #FFF;
+    }
+
+    footer h1 {
+        color: #222221;
+        font-weight: 300;
+        font-size: 30px;
+        margin: 0 0 30px;
+    }
+
+    @media all and (min-width: 1200px) {
+      .carousel_style {
+        left: 10%;
+        right: 10%;
+        bottom: 33%;
+        padding: 8% 1em;
+      }
     }
 
     /* Too narrow to support three columns */
@@ -411,16 +441,14 @@
         }
 
         header h1 {
-          display: none;
+          /*display: none;*/
         }
 
         .carousel_style {
-          /*background: #000;*/
-          /*opacity: 0.7;*/
           left: 6%;
           right: 6%;
-          padding: 0.1em 0.2em 1.2em;
-          font-size: 1em;
+          padding: 2em;
+          font-size: 0.4em;
           bottom: 33%;
         }
     }
@@ -437,12 +465,32 @@
       /*height: 560px!important;*/
       width: 100%;
     }
+    #section2 {
+      background: #FFF;
+    }
+    #section4 {
+      background: #FFF;
+    }
+    .description {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: #424242;
+      margin: 0 0 10px;
+    }
+    .readStyle {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 6px;
+      margin-top: 30px;
+    }
     </style>
   </head>
   <body>
   <div class="container container-full">
     <header>
-        <a href="./"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPos</h1></a>
+        <a href="./"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPOS</h1></a>
     </header>
     <div class="carousel_section">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -457,21 +505,21 @@
               <div class="item CarouselImg active">
                   <img src="images/c1_f.png" alt="First Slide">
                   <div class="carousel-caption carousel_style">
-                    <a href="c1.html"><h1>Increase working efficiency and <br>shorten ordering process</h1></a>
+                    <a href="c1.html"><h1>Increase Working Efficiency and <br>Shorten Ordering Process</h1><div class="readStyle">read more</div></a>
                     <!-- Traditionally waiters/waitresses have to use paper to write it down what guests ordering which takes some time if it’s a long food name (based on different language characters). WifiPos only acquires a tabslet which can be efficiently connected between front and back of house management. One-tap on the “E-table”at the front house, the back house would get an immediate response and be ready to serve on time. -->
                   </div>
               </div>
               <div class="item CarouselImg">
                   <img src="images/c2_f.png" alt="Second Slide">
                   <div class="carousel-caption carousel_style">
-                  <a href="c2.html"><h1>Being eco-friendly with <br>less paper consumption</h1></a>
+                  <a href="c2.html"><h1>Being Eco-friendly with <br>Less Paper Consumption</h1><div class="readStyle">read more</div></a>
                   <!-- It would be a tremendous expense for the paper consumption along with the growing business. By saving our living environment as well as daily expense, reduction of paper is necessary for business purpose. -->
                   </div>
               </div>
               <div class="item CarouselImg">
                   <img src="images/c3_f.png" alt="Third Slide">
                   <div class="carousel-caption carousel_style">
-                  <a href="c3.html"><h1>Easier maintenance and <br>Scalable extension</h1></a>
+                  <a href="c3.html"><h1>Easier Maintenance and <br>Scalable Extension</h1><div class="readStyle">read more</div></a>
                   <!-- Wifi-POS uses wifi and is easier to maintain ordering system on daily basis than App which takes higher expenses and more time to be developed and updated across different platforms. Besides, it can be extended to be applied for the future development such as self-order system, remote-order system, etc. -->
                   </div>
               </div>
@@ -485,15 +533,15 @@
           </a>
       </div>
     </div>
-    <div class='bottom'>
+    <div class='bottom' id="section2">
       <div class='content'>
-        <h1>Evolution of food order</h1>
-        <div>In 21st century, human’s life style and habit are changing and being evolved by technology development, therefore, utilising technology is essential to flourish business.</div>
+        <h1>Evolution of Food Order</h1>
+        <div class="description">In 21st century, human’s life style and habit are changing and being evolved by technology development, therefore, utilising technology is essential to flourish business.</div>
       </div>
     </div>
     <div id='middle'>
       <article>
-        <div>Table management</div>
+        <div style="font-weight: 300;">Table Management</div>
       <a class="btn btn-info btn-lg" href="./functions/table.html">Readmore</a>
       </article>
       <!-- Modal -->
@@ -503,7 +551,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Table management</h4>
+              <h4 class="modal-title">Table Management</h4>
             </div>
             <div class="modal-body">
               <ol>
@@ -526,7 +574,7 @@
         </div>
       </div>
       <aside>
-        <div>Situational application</div>
+        <div style="font-weight: 300;">Situational Application</div>
       <a class="btn btn-info btn-lg" href="./functions/application.html">Readmore</a>
       </aside>
       <!-- Modal -->
@@ -536,7 +584,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Situational application</h4>
+              <h4 class="modal-title">Situational Application</h4>
             </div>
             <div class="modal-body">
               <ol>
@@ -559,25 +607,80 @@
         </div>
       </div>
     </div>
-    <div class='bottom'>
+    <div class='bottom' id="section4">
       <div class='content'>
-        <h1>Our clients <span class="glyphicon glyphicon-user"></span></h1>
+        <h1>Our Clients</h1>
+        <div class="description">It's been more than 3 years that WifiPos helps our clients speed up more than 30 % ordering effiency and keep growing business and profits. We are also dedicated to provide more customized versions to fit different kinds of needs. Hope to grab more opportunities to serve more restaurants and satistify our customers.</div>
       </div>
     </div>
     <div class='bottom'>
       <article>
-      <a href="clients/fish.html"><h1>一品漁村 YiPing Fish Village</h1></a>
+      <a data-toggle="modal" href="#fishModal"><h1 style="font-weight: 300;">一品漁村 YiPing Fish Village</h1></a>
       <!-- Welcome to YiPing Village where you can enjoy the most fresh seafood and most various and delicious meat sets and hot pots -->
       </article>
       <nav>
-      <a href="clients/natural.html"><h1>C.S.H. Natural 上山採覓</h1></a>
+      <a data-toggle="modal" href="#naturalModal"><h1 style="font-weight: 300;">C.S.H. Natural 上山採覓</h1></a>
       <!-- C.S.H Natural dedicates to provide a food journey where customers can enjoy natural, pure, tasty and healthy food without far driving to mountains -->
       </nav>
       <aside>
-      <a href="clients/chili.html"><h1>Red Chili  紅辣椒川菜館</h1></a>
+      <a data-toggle="modal" href="#redChiliModal"><h1 style="font-weight: 300;">Red Chili  紅辣椒川菜館</h1></a>
       <!-- A authentic sichuan food restaurant which delivers rich and various spicy food in a spacious place where you can fully enjoy drinking and chatting with friends. -->
       </aside>
     </div>
+      <!-- Modal -->
+      <div class="modal fade" id="fishModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">一品漁村 YiPing Fish Village</h4>
+            </div>
+            <div class="modal-body">
+              Welcome to YiPing Village where you can enjoy the most fresh seafood and most various and delicious meat sets and hot pots
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="naturalModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">C.S.H. Natural 上山採覓</h4>
+            </div>
+            <div class="modal-body">
+              C.S.H Natural dedicates to provide a food journey where customers can enjoy natural, pure, tasty and healthy food without far driving to mountains
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="redChiliModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Red Chili  紅辣椒川菜館</h4>
+            </div>
+            <div class="modal-body">
+              A authentic sichuan food restaurant which delivers rich and various spicy food in a spacious place where you can fully enjoy drinking and chatting with friends.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <footer>
       <h1>Contact Information</h1>
       <span class="glyphicon glyphicon-envelope block"> <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">soar.l@mig.me</a> / <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">k0922224222@gmail.com</a></span>
