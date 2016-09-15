@@ -321,13 +321,13 @@
         display: block;
         color: #999;
         /*margin: 4px;*/
+        padding: 4em 0;
         text-align: center;
         min-height: 300px;
         /*border: 1px solid #eebb55;*/
         /*border-radius: 7pt;*/
         /*background: rgba(0,0,0,0.05);*/
         font-weight: 500;
-        background: #ededed;
     }
     footer .glyphicon.block {
         display: block;
@@ -390,19 +390,10 @@
 
     .my-container {
         position: relative;
+        background: #000;
         overflow: hidden;
         height: 560px;
-        background-image: url(images/c2_f.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .mask {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
-        background: #000;
+        margin-bottom: 60px;
     }
     .my-container h1 {
         /*padding: 50px;*/
@@ -439,22 +430,6 @@
       color: #424242;
       margin-bottom: 35px;
     }
-    .layout {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    #leftSec {
-        order: 1;
-        flex-grow: 2;
-        font-size: 25px;
-        font-weight: 300;
-        padding: 30px 50px;
-    }
-    #rightSec {
-        order: 2;
-        flex-grow: 1;
-        padding: 30px;
-    }
     </style>
   </head>
   <body>
@@ -463,21 +438,20 @@
         <a href="./index.html"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPOS</h1></a>
     </header>
     <div class="my-container">
-      <!-- <h1>Increase working efficiency and <br>shorten ordering process</h1> -->
-      <div class="mask"><h1>Being Eco-friendly with <br>Less Paper Consumption</h1></div>
+      <h1>Increase working efficiency and <br>shorten ordering process</h1>
+      <img src="images/c1_f.png">
     </div>
-    <div class="layout">
-    <div class="container" id="leftSec">
+    <div class="container">
       <div class="row">
-      <p>It would be a tremendous expense for the paper consumption along with the growing business. By saving our living environment as well as daily expense, reduction of paper is necessary for business purpose.</p>
+      <p>Traditionally waiters/waitresses have to use paper to write it down what guests ordering which takes some time if it’s a long food name (based on different language characters).</p>
+      <p>WifiPos only acquires a tabslet which can be efficiently connected between front and back of house management. One-tap on the “E-table”at the front house, the back house would get an immediate response and be ready to serve on time.</p>
       </div>
     </div>
-    <footer id="rightSec">
-      <h2>Contact Information</h2>
-      <span class="glyphicon glyphicon-envelope block"> <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">soar04095200@gmail.com</a> / <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">k0922224222@gmail.com</a></span>
+    <footer>
+      <h1>Contact Information</h1>
+      <span class="glyphicon glyphicon-envelope block"> <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">soar.l@mig.me</a> / <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">k0922224222@gmail.com</a></span>
       <span class="glyphicon glyphicon-earphone block"> (886) 927576376</span>
     </footer>
     </div>
-  </div>
   </body>
 </html>

@@ -321,13 +321,13 @@
         display: block;
         color: #999;
         /*margin: 4px;*/
-        padding: 4em 0;
         text-align: center;
         min-height: 300px;
         /*border: 1px solid #eebb55;*/
         /*border-radius: 7pt;*/
         /*background: rgba(0,0,0,0.05);*/
         font-weight: 500;
+        background: #ededed;
     }
     footer .glyphicon.block {
         display: block;
@@ -390,10 +390,19 @@
 
     .my-container {
         position: relative;
-        background: #000;
         overflow: hidden;
         height: 560px;
-        margin-bottom: 60px;
+        background-image: url(../images/Red_Chili.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background: #000;
     }
     .my-container h1 {
         /*padding: 50px;*/
@@ -430,27 +439,45 @@
       color: #424242;
       margin-bottom: 35px;
     }
+    .layout {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #leftSec {
+        order: 1;
+        flex-grow: 2;
+        font-size: 30px;
+        font-weight: 300;
+        padding: 30px;
+    }
+    #rightSec {
+        order: 2;
+        flex-grow: 1;
+        padding: 30px;
+    }
     </style>
   </head>
   <body>
   <div class="container container-full">
     <header>
-        <a href="./"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPos</h1></a>
+        <a href="./../index.html"><h1 style="font-weight: 700!important; float:left; position: fixed; z-index:9999;">WifiPOS</h1></a>
     </header>
     <div class="my-container">
       <!-- <h1>Increase working efficiency and <br>shorten ordering process</h1> -->
-      <img src="../images/Red_Chili.png">
+      <div class="mask"></div>
     </div>
-    <div class="container">
-      <div class="row">
+    <div class="layout">
+    <div class="container" id="leftSec">
+      <div>
       <p>A authentic sichuan food restaurant which delivers rich and various spicy food in a spacious place where you can fully enjoy drinking and chatting with friends.</p>
       </div>
     </div>
-    <footer>
-      <h1>Contact Information</h1>
-      <span class="glyphicon glyphicon-envelope block"> <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">soar.l@mig.me</a> / <a href="mailto:someone@example.com?Subject=Hello, I have question about WifiPos" target="_top">k0922224222@gmail.com</a></span>
+    <footer id="rightSec">
+      <h2>Contact Information</h2>
+      <span class="glyphicon glyphicon-envelope block"> <a href="mailto:soar04095200@gmail.com?Subject=Hello, I have question about WifiPos" target="_top">soar04095200@gmail.com</a> / <a href="mailto:k0922224222@gmail.com?Subject=Hello, I have question about WifiPos" target="_top">k0922224222@gmail.com</a></span>
       <span class="glyphicon glyphicon-earphone block"> (886) 927576376</span>
     </footer>
     </div>
+  </div>
   </body>
 </html>
