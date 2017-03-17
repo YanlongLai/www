@@ -243,3 +243,15 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.issues-reset-query-icon {
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    margin-right: 3px;
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    border-radius: 3px;
+    fill: white;
+}
